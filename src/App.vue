@@ -28,4 +28,7 @@ export default {
 .app-main{
   margin-top: 40px;
 }
+.fy{
+  text-align: center;
+}
 </style>

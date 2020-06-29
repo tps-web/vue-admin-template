@@ -32,9 +32,19 @@ if (process.env.NODE_ENV === 'development') {
   mockXHR()
 }
 
+Vue.prototype.msgSuccess = function(msg) {
+    this.$message({ showClose: true, message: msg, type: "success" });
+}
 
+Vue.prototype.msgError = function(msg) {
+    this.$message({ showClose: true, message: msg, type: "error" });
+}
+
+Vue.prototype.msgInfo = function(msg) {
+    this.$message.info(msg);
+}
 // set ElementUI lang to EN
-Vue.use(ElementUI, { locale })
+Vue.use(ElementUI)
 // 如果想要中文版 element-ui，按如下方式声明
 // Vue.use(ElementUI)
 

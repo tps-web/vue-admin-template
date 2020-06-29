@@ -100,6 +100,17 @@ export const constantRoutes = [{
             meta: { title: '用户管理', icon: 'shouye', affix: true }
         }]
      },
+      {
+        path: '/classify',
+        component: Layout,
+        children: [{
+            path: '/classify',
+            name: '分类',
+            component: () =>
+                import ('@/views/classify/index'),
+            meta: { title: '分类', icon: 'shouye', affix: true }
+        }]
+     },
    
     // 404 page must be placed at the end !!!
     { path: '*', redirect: '/404', hidden: true }
